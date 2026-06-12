@@ -9,6 +9,34 @@
 
 // Start Coding Here
 
+/* 
+ในโจทย์นี้มี callback function อยู่กี่อัน -> 4 อัน คือ postCreated, postLiked, postCommented, postShared
+ในโจทย์นี้มี high order function อยู่ 1 อัน คือ sendNotification
+*/
+
+// create callback function (postCreated)
+let postCreated = function() {
+    return "📝 แจ้งเตือน: โพสต์ของคุณถูกสร้างสำเร็จ!";
+};
+
+// create callback function (postLiked)
+let postLiked = function() {
+    return "👍 แจ้งเตือน: มีคนมากดไลค์โพสต์ของคุณ!";
+};
+
+let postCommented = function() {
+    return "💬 แจ้งเตือน: มีคนมาคอมเมนต์ในโพสต์ของคุณ!";
+};
+
+let postShared = function() {
+    return "🔄 แจ้งเตือน: มีคนแชร์โพสต์ของคุณ!"
+};
+
+// create High Order Function
+let sendNotification = function(callback) {
+    return callback();
+};
+
 
 // เมื่อ function นี้ทำงานจะเห็นผลลัพธ์ดังนี้
 console.log(sendNotification(postCreated));   // 📝 แจ้งเตือน: โพสต์ของคุณถูกสร้างสำเร็จ!

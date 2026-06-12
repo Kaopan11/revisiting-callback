@@ -7,6 +7,24 @@
 
 let damage = 30;
 // Start Coding Here
+/* 
+callback function มี 2 อัน -> attack และ runAway
+*/
+
+// create callback function (attack)
+let attack = function() {
+    return `💥 โจมตีสำเร็จ! สร้างความเสียหาย ${damage} แต้ม`;
+}
+
+// create callback function (runAway)
+let runAway = function() {
+    return `😨 หนีสำเร็จ! รอดตายหวุดหวิด!`
+}
+
+// create high order function (playerAction)
+let playerAction = function(callback) {
+    return callback();
+}
 
 
 // เมื่อ function นี้ทำงานจะเห็นผลลัพธ์ดังนี้

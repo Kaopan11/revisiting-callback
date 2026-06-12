@@ -7,6 +7,40 @@
 */
 
 // Start Coding Here
+/* 
+สรุปว่ามี callback function กี่อัน -> 4 อัน ดูจาก add, subtract, multiply, divide
+higher order มีชื่อว่า calculate (num1, num2, callback)
+*/
+
+// create callback function (add)
+let add = function(num1, num2,) {
+    return num1 + num2;
+};
+
+let subtract = function(num1, num2) {
+    return num1 - num2;
+}
+
+let multiply = function(num1, num2) {
+    return num1 * num2;
+}
+
+let divide = function(num1, num2) {
+    /*
+    if (num2 === 0) {
+        return "Cannot divide by zero";
+    }
+    else {
+        return num1 / num2;
+    }
+    */
+    return num2 === 0 ? "Cannot divide by zero" : num1 / num2;
+}
+
+// create high order function (calculate)
+let calculate = function(num1, num2, callback)  {
+    return callback(num1, num2);
+};
 
 
 // เมื่อ function นี้ทำงานจะเห็นผลลัพธ์ดังนี้
